@@ -38,7 +38,7 @@ const AddProduct = () => {
         p.id === existingProduct.id ? { ...p, ...formData } : p
       );
       localStorage.setItem("products", JSON.stringify(updated));
-      alert("✅ Product updated successfully!");
+      alert(" Product updated successfully!");
     } else {
       const newProduct = {
         id: Date.now(),
@@ -48,7 +48,7 @@ const AddProduct = () => {
       };
       const updated = [...existing, newProduct];
       localStorage.setItem("products", JSON.stringify(updated));
-      alert("✅ Product added successfully!");
+      alert(" Product added successfully!");
     }
 
     navigate("/admin-dashboard/products");
@@ -66,7 +66,7 @@ const AddProduct = () => {
       </h2>
 
       <form onSubmit={handleSubmit} className="space-y-5">
-        {/* Product Name */}
+      
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Product Name
@@ -81,7 +81,7 @@ const AddProduct = () => {
           />
         </div>
 
-        {/* SKU */}
+        
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             SKU
@@ -96,7 +96,7 @@ const AddProduct = () => {
           />
         </div>
 
-        {/* Category Dropdown */}
+        
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Category
@@ -117,7 +117,7 @@ const AddProduct = () => {
           </select>
         </div>
 
-        {/* Price */}
+        
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Price (PKR)
@@ -132,7 +132,7 @@ const AddProduct = () => {
           />
         </div>
 
-        {/* Quantity */}
+        
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Quantity
@@ -147,7 +147,7 @@ const AddProduct = () => {
           />
         </div>
 
-        {/* Buttons */}
+      
         <div className="flex justify-end gap-3 mt-6">
           <button
             type="button"

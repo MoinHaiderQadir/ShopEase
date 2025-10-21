@@ -22,8 +22,8 @@ const Sidebar = () => {
       icon: <CubeIcon className="h-5 w-5" />,
     },
     {
-      name: "User",
-      path: "/admin-dashboard/suppliers",
+      name: "Cashier Invoices",
+      path: "/admin-dashboard/cashierinvoices",
       icon: <TruckIcon className="h-5 w-5" />,
     },
     {
@@ -35,7 +35,7 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Mobile toggle button */}
+      
       <button
         className="md:hidden fixed top-4 left-4 z-50 bg-blue-600 text-white p-2 rounded-md shadow-md"
         onClick={() => setIsOpen(!isOpen)}
@@ -43,18 +43,17 @@ const Sidebar = () => {
         {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
       </button>
 
-      {/* Sidebar container */}
+      
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg border-r border-gray-200 z-40 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 ease-in-out`}
       >
-        {/* Logo section */}
+       
         <div className="flex items-center justify-center py-6 border-b border-gray-200">
           <h1 className="text-2xl font-bold text-blue-600">Inventory Pro</h1>
         </div>
 
-        {/* Nav links */}
         <nav className="mt-6 space-y-1 px-3">
           {menuItems.map((item) => (
             <NavLink
@@ -75,13 +74,13 @@ const Sidebar = () => {
           ))}
         </nav>
 
-        {/* Footer */}
+        
         <div className="absolute bottom-0 w-full border-t border-gray-200 p-4 text-sm text-gray-500 text-center">
           © 2025 Inventory System
         </div>
       </div>
 
-      {/* Mobile overlay */}
+     
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 md:hidden z-30"

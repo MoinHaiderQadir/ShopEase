@@ -137,31 +137,6 @@ const Reports = () => {
           </ResponsiveContainer>
         </div>
       </div>
-
-      {/* Recent Transactions Table */}
-      <div className="bg-white shadow rounded-xl border border-gray-100 overflow-x-auto">
-        <h3 className="text-lg font-semibold text-gray-800 p-5 border-b">Recent Transactions</h3>
-        <table className="w-full text-left border-collapse">
-          <thead className="bg-gray-50 border-b">
-            <tr>
-              <th className="px-6 py-3 text-sm font-semibold text-gray-600">Date</th>
-              <th className="px-6 py-3 text-sm font-semibold text-gray-600">Type</th>
-              <th className="px-6 py-3 text-sm font-semibold text-gray-600">Supplier</th>
-              <th className="px-6 py-3 text-sm font-semibold text-gray-600">Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            {transactions.map((t) => (
-              <tr key={t.id} className="border-b hover:bg-gray-50 transition-colors">
-                <td className="px-6 py-3 text-gray-700 whitespace-nowrap">{t.date}</td>
-                <td className="px-6 py-3 text-gray-700 whitespace-nowrap">{t.type}</td>
-                <td className="px-6 py-3 text-gray-700 whitespace-nowrap">{t.supplier}</td>
-                <td className="px-6 py-3 font-medium text-gray-800 whitespace-nowrap">${t.amount}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </div>
   );
 };
